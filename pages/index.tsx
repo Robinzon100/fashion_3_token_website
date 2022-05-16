@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("components/pages/landing/hero/Hero.landing"), {
     ssr: false
-  })
+})
 
 const index = () => {
     return (
