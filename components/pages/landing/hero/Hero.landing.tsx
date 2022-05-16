@@ -1,59 +1,60 @@
 // OWN
-import { useState, useEffect } from "react"
-import gsap from "gsap"
-import { useMediaQuery } from 'usehooks-ts'
+import { useState, useEffect } from "react";
+import gsap from "gsap";
+import { useMediaQuery } from 'usehooks-ts';
 
 
-import { getVideoBlobObjectUrl } from "components/utils/blobLoaders"
+import { getVideoBlobObjectUrl } from "components/utils/blobLoaders";
 
 
 const Hero = () => {
-    const matches = useMediaQuery('(min-width: 768px)')
+    const matches = useMediaQuery('(min-width: 768px)');
 
-    const [startVideo, setStartVideo] = useState("")
-    const [endVideo, setEndVideo] = useState("")
+    const [startVideo, setStartVideo] = useState("");
+    const [endVideo, setEndVideo] = useState("");
 
     const handleVideoChange = async () => {
-        // const startVideo = document.getElementById("startVideo") as HTMLVideoElement
-        // const endVideo = document.getElementById("endVideo") as HTMLVideoElement
+        let startBlob = await getVideoBlobObjectUrl("/video/start.mp4");
+        setStartVideo(startBlob);
+
+        const endBlob = await getVideoBlobObjectUrl("/video/end.mp4");
+        setEndVideo(endBlob);
+
+        gsap
+            .timeline()
+            .fromTo("#startVideo", {
+                opacity: 1,
+            }, {
+                visibility: 'hidden',
+                opacity: 0,
+                duration: .1,
+                ease: 'none'
+            })
+            .fromTo("#endVideo", {
+                opacity: 0
+            }, {
+                opacity: 1,
+                duration: .1,
+                ease: 'none'
+            });
+    };
+
+    useEffect(() => { handleVideoChange(); });
 
 
-        let startBlob = await getVideoBlobObjectUrl("/video/start.mp4")
-        setStartVideo(startBlob)
 
-        const endBlob = await getVideoBlobObjectUrl("/video/end.mp4")
-        setEndVideo(endBlob)
-
-
-        gsap.to("#startVideo", {
-            display: 'none',
-            opacity: 0,
-            delay: 3,
-            duration: 0.5,
-        })
-
-        gsap.to("#endVideo", {
-            display: 'block',
-            opacity: 1,
-            delay: 3,
-            duration: 0.5,
-        })
-    }
-
-    useEffect(() => {
-        handleVideoChange()
-    }, [])
-
+    
     return (
         <>
             <div className="hero_landing_main">
                 <div className="video-container">
                     <video
                         className="start"
-                        controls
+                        controls={false}
                         muted
                         autoPlay
                         playsInline={true}
+                        loop={false}
                         src={matches ? startVideo : "/video/compressed-start.mp4"}
                         id="startVideo"
                     />
@@ -61,10 +62,11 @@ const Hero = () => {
 
                     <video
                         className="end"
-                        controls
+                        controls={false}
                         muted
                         autoPlay
                         playsInline={true}
+                        loop
                         src={matches ? endVideo : "/video/compressed-end.mp4"}
                         id="endVideo"
                     />
