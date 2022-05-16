@@ -6,7 +6,7 @@ import "../styles/main.scss";
 import Navigation from "components/global/navigation/Navigation";
 import HeadAndMeta from "components/global/headAndMeta/HeadAndMeta";
 import React from "react";
-import Footer from 'components/global/footer/Footer';
+// import Footer from 'components/global/footer/Footer';
 // import Loading from '../components/global/Loading/Loading';
 
 
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     {/* <Loading /> */}
                     <Navigation />
                     <Component {...pageProps} />
-                    <Footer />
+                    {/* <Footer /> */}
                 </main>
             </React.StrictMode>
         </>

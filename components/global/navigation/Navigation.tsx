@@ -67,7 +67,7 @@ const Navigation = () => {
                         <li className="links">
                             <Link
                                 passHref
-                                href="contact_us">
+                                href="/contact_us">
                                 <h1 className="f-size-p4 f-weight-400">
                                     Contact us
                                 </h1>

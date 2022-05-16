@@ -23,7 +23,7 @@
       cursor: pointer;
       width: 15%;
       height: 4.5rem;
-      @include background-image("/svg/full logo -- white.svg", contain);
+    //   @include background-image("/svg/full logo -- white.svg", contain);
 
       @media only screen and (max-width: $medium_screen_query) {
         width: 40%;

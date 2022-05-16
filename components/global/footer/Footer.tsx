@@ -1,11 +1,11 @@
-import Link from "next/link"
+// import Link from "next/link"
 
 const Footer = () => {
 
 
     return (
         <>
-            <div className="footer">
+            {/* <div className="footer">
                 <div className="footer_container">
                     <Link href="/" passHref>
                         <div className="logo" />
@@ -24,7 +24,7 @@ const Footer = () => {
                     </a>
 
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
