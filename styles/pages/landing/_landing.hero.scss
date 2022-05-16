@@ -13,8 +13,14 @@
             transform: translateY(-2vh);
         } 
 
+        // .start {
+        //     z-index: 1;
+            
+        // }
+        // .end {
+        //     z-index: 2;
+        // }
         .start,.end {
-            z-index: 2;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -22,13 +28,13 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-52%) scale(0.4);
             background-size: cover;
             outline: none !important;
             user-select: none;
 
             @media screen and (max-width: 500px) {
-                transform: translateX(-50%) translateY(-59%) scale(0.20) !important;
+                transform: translateX(-50%) translateY(-59%) scale(0.2) !important;
                 // background-color: red;
             } 
         }

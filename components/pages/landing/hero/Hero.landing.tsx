@@ -8,7 +8,7 @@ import { getVideoBlobObjectUrl } from "components/utils/blobLoaders";
 
 
 const Hero = () => {
-    const matches = useMediaQuery('(min-width: 768px)');
+    const matches = useMediaQuery('(max-width: 768px)');
 
     const [startVideo, setStartVideo] = useState("");
     const [endVideo, setEndVideo] = useState("");
@@ -21,18 +21,17 @@ const Hero = () => {
 
         const tl = gsap.timeline();
 
-        tl
-            .fromTo("#startVideo", {
-                opacity: 1,
+        tl.fromTo("#startVideo", {
+                zIndex: 1,
             }, {
-                opacity: 0,
+                zIndex: -1,
                 delay: 4.5,
                 duration: .2,
             })
             .fromTo("#endVideo", {
-                opacity: 0
+                zIndex: 0,
             }, {
-                opacity: 1,
+                zIndex: 1,
                 duration: .2,
             });
     };
@@ -54,8 +53,8 @@ const Hero = () => {
                         muted
                         autoPlay
                         playsInline={true}
-                        loop={false}
-                        src={matches ? startVideo : "/video/compressed-start.mp4"}
+                        loop
+                        src={!matches ? startVideo : "/video/compressed-start.mp4"}
                         id="startVideo"
                     />
 
@@ -66,8 +65,8 @@ const Hero = () => {
                         muted
                         autoPlay
                         playsInline={true}
-                        loop={true}
-                        src={matches ? endVideo : "/video/compressed-end.mp4"}
+                        loop
+                        src={!matches ? endVideo : "/video/compressed-end.mp4"}
                         id="endVideo"
                     />
                 </div>
