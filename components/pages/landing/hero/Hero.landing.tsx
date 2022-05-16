@@ -24,7 +24,7 @@ const Hero = () => {
         tl.fromTo("#startVideo", {
                 zIndex: 1,
             }, {
-                zIndex: -1,
+                zIndex: 0,
                 delay: 4.5,
                 duration: .2,
             })
