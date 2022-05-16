@@ -1,0 +1,16 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 100;
+  position: fixed;
+  @include flex();
+
+  .logo {
+    width: 30vw;
+    height: 30vw;
+    @include background-image("/svg/logo_mark.svg");
+    // transform: translateY(15%);
+    // opacity: 0;
+  }
+}

@@ -1,0 +1,28 @@
+
+//* ================ ABSTRACTS
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/colors";
+
+//* ================ BASE
+@import "base/base";
+
+
+//* ================ FONTS
+@import "fonts/font-face";
+@import "fonts/font-style";
+@import "fonts/font-weight";
+@import "fonts/font_size";
+
+
+//* ================ PAGE
+@import "pages/landing/landing.hero";
+
+
+//* ================ COMPONENTS
+@import "components/global/navigation/navigation";
+@import "components/global/loading";
+@import "components/global/footer/footer";
+
+
+
