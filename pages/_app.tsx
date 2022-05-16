@@ -3,7 +3,7 @@ import "../styles/main.scss";
 
 
 //! ---- OWN
-import Navigation from "components/global/navigation/Navigation";
+// import Navigation from "components/global/navigation/Navigation";
 import HeadAndMeta from "components/global/headAndMeta/HeadAndMeta";
 import React from "react";
 // import Footer from 'components/global/footer/Footer';
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
                 <main className="main">
                     {/* <Loading /> */}
-                    <Navigation />
+                    {/* <Navigation /> */}
                     <Component {...pageProps} />
                     {/* <Footer /> */}
                 </main>

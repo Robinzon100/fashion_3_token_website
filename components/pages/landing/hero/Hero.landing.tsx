@@ -13,34 +13,33 @@ const Hero = () => {
     const [startVideo, setStartVideo] = useState("");
     const [endVideo, setEndVideo] = useState("");
 
+
+
     const handleVideoChange = async () => {
-        let startBlob = await getVideoBlobObjectUrl("/video/start.mp4");
-        setStartVideo(startBlob);
+        getVideoBlobObjectUrl("/video/start.mp4").then(src => setStartVideo(src));
+        getVideoBlobObjectUrl("/video/end.mp4").then(src => setEndVideo(src));
 
-        const endBlob = await getVideoBlobObjectUrl("/video/end.mp4");
-        setEndVideo(endBlob);
+        const tl = gsap.timeline();
 
-        
-        gsap
-            .timeline()
+        tl
             .fromTo("#startVideo", {
                 opacity: 1,
             }, {
-                visibility: 'hidden',
                 opacity: 0,
-                duration: .1,
-                ease: 'none'
+                delay: 4.5,
+                duration: .2,
             })
             .fromTo("#endVideo", {
                 opacity: 0
             }, {
                 opacity: 1,
-                duration: .1,
-                ease: 'none'
+                duration: .2,
             });
     };
 
-    useEffect(() => { handleVideoChange(); });
+    useEffect(() => {
+        handleVideoChange();
+    }, []);
 
 
 
@@ -67,7 +66,7 @@ const Hero = () => {
                         muted
                         autoPlay
                         playsInline={true}
-                        loop
+                        loop={true}
                         src={matches ? endVideo : "/video/compressed-end.mp4"}
                         id="endVideo"
                     />
