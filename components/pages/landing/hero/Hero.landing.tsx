@@ -50,7 +50,7 @@ const Hero = () => {
                 <div className="video-container">
                     <video
                         className="start"
-                        controls
+                        // controls
                         muted
                         autoPlay
                         playsInline={true}
@@ -61,7 +61,7 @@ const Hero = () => {
 
                     <video
                         className="end"
-                        controls
+                        // controls
                         muted
                         autoPlay
                         playsInline={true}
