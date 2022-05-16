@@ -20,6 +20,7 @@ const Hero = () => {
         const endBlob = await getVideoBlobObjectUrl("/video/end.mp4");
         setEndVideo(endBlob);
 
+        
         gsap
             .timeline()
             .fromTo("#startVideo", {
@@ -43,7 +44,7 @@ const Hero = () => {
 
 
 
-    
+
     return (
         <>
             <div className="hero_landing_main">
