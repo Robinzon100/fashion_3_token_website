@@ -22,20 +22,16 @@ const Hero = () => {
         const tl = gsap.timeline();
 
         tl.fromTo("#startVideo", {
-                zIndex: 1,
-                // opacity:1
-            }, {
-                zIndex: 0,
-                // opacity:0,
-                delay: 4.5,
-                duration: .2,
-            })
+            zIndex: 1,
+        }, {
+            zIndex: 0,
+            delay: 4.8,
+            duration: .2,
+        })
             .fromTo("#endVideo", {
                 zIndex: 0,
-                // opacity: 0,
             }, {
                 zIndex: 1,
-                // opacity: 0,
                 duration: .2,
             });
     };
@@ -57,7 +53,6 @@ const Hero = () => {
                         muted
                         autoPlay
                         playsInline={true}
-                        loop
                         src={!matches ? startVideo : "/video/compressed-start.mp4"}
                         id="startVideo"
                     />
@@ -70,7 +65,7 @@ const Hero = () => {
                         autoPlay
                         playsInline={true}
                         loop
-                        src={!matches ? endVideo : "/video/compressed-end.mp4"}
+                        src={ "/video/compressed-end.mp4"}
                         id="endVideo"
                     />
                 </div>
