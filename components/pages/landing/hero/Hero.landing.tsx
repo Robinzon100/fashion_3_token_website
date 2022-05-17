@@ -1,4 +1,5 @@
 // OWN
+import gsap from "gsap";
 import { useEffect } from "react";
 // import { useMediaQuery } from 'usehooks-ts';
 
@@ -11,16 +12,19 @@ const Hero = () => {
 
 
 
-    const handleVideoChange =  () => {
-        const intro = document.querySelector(".intro") as HTMLVideoElement
-        const idle = document.querySelector(".idle") as HTMLVideoElement
+    const handleVideoChange = () => {
+        const intro = document.querySelector(".intro") as HTMLVideoElement;
+        const idle = document.querySelector(".idle") as HTMLVideoElement;
 
-        intro.addEventListener("ended",()=> {
-            idle.style.zIndex = "1"
-            intro.style.zIndex = "0"
-            idle.autoplay = true
-            idle.load()
-        })
+        intro.addEventListener("ended", () => {
+            gsap.to('.intro',{
+                opacity: 0,
+                duration: 1,
+                ease: 'power4.out'
+            });
+            idle.autoplay = true;
+            idle.load();
+        });
     };
 
     useEffect(() => {

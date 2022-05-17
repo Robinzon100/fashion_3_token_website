@@ -19,13 +19,12 @@
         .intro,
         .idle {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0%;
+            left: 0%;
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translateX(-50%) translateY(-52%);
             background-size: cover;
             outline: none !important;
             user-select: none;
