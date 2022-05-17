@@ -41,8 +41,8 @@ const Hero = () => {
                     playsInline={true}
                     loop={false}
                 >
-                    <source src="/video/intro--desktop.webm" type="video/webm" />
-                    <source src="/video/intro--desktop.mp4" type="video/mp4" />
+                    <source src="video/intro--desktop.webm" type="video/webm" />
+                    <source src="video/intro--desktop.mp4" type="video/mp4" />
                 </video>
 
 
@@ -53,8 +53,8 @@ const Hero = () => {
                     playsInline={true}
                     loop
                 >
-                    <source src="/video/idle--desktop.webm" type="video/webm" />
-                    <source src="/video/idle--desktop.mp4" type="video/mp4" />
+                    <source src="video/idle--desktop.webm" type="video/webm" />
+                    <source src="video/idle--desktop.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>
