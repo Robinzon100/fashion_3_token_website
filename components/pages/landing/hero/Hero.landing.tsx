@@ -22,12 +22,14 @@ const Hero = () => {
         const tl = gsap.timeline();
 
         tl.fromTo("#startVideo", {
-            zIndex: 1,
-        }, {
-            zIndex: 0,
-            delay: 4.8,
-            duration: .2,
-        })
+                zIndex: 1,
+                // opacity:1
+            }, {
+                zIndex: 0,
+                // opacity:0,
+                delay: 4.8,
+                duration: .2,
+            })
             .fromTo("#endVideo", {
                 zIndex: 0,
             }, {
@@ -49,23 +51,25 @@ const Hero = () => {
                 <div className="video-container">
                     <video
                         className="start"
-                        controls={false}
+                        controls={true}
                         muted
                         autoPlay
                         playsInline={true}
-                        src={!matches ? startVideo : "/video/compressed-start.mp4"}
+                        loop={false}
+                        // type="video/mp4"
+                        src={!matches ? startVideo : "/video/compressed-end-super.mp4"}
                         id="startVideo"
                     />
 
 
                     <video
                         className="end"
-                        controls={false}
+                        controls={true}
                         muted
                         autoPlay
                         playsInline={true}
                         loop
-                        src={ "/video/compressed-end.mp4"}
+                        src={!matches ? endVideo : "/video/compressed-end-super.mp4"}
                         id="endVideo"
                     />
                 </div>
