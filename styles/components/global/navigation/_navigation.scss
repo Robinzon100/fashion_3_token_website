@@ -1,139 +1,110 @@
-#tokenomics,
-#roadmap,
-#page-wrap {
-  padding-top: 10vh;
-}
-
 .navigation {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-  background: rgba(20, 21, 23, 0.38);
-  backdrop-filter: blur(62px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: var(--black_-1);
+    backdrop-filter: blur(62px);
 
-  .navigation_container {
-    padding: 2rem 5vw;
-
-    @media only screen and (max-width: 960px) {
-      padding: 1rem 3vw;
-    }
-
-    .logo {
-      cursor: pointer;
-      width: 15%;
-      height: 4.5rem;
-    //   @include background-image("/svg/full logo -- white.svg", contain);
-
-      @media only screen and (max-width: $medium_screen_query) {
-        width: 40%;
-        height: 3rem;
-      }
-    }
-
-    .navigation_items {
-      @include flex(space-between, center, row);
-
-      .item {
-        @include flex(initial, center, row);
-        left: 0;
-        position: absolute;
-        transform: translate(-50%, 5%);
-        left: 50%;
+    .navigation_container {
+        padding: 3rem 5vw;
 
         @media only screen and (max-width: $medium_screen_query) {
-          position: absolute;
-          left: 0;
-          bottom: 0%;
-          transform: translateY(100%);
-          flex-direction: column;
-          width: 100%;
-          background-color: var(--black_-2);
-          opacity: 0;
-          height: 98vh;
+            padding: 2rem 3vw;
         }
 
-        :not(:first-child) {
-          margin-left: 4rem;
+        .logo {
+            cursor: pointer;
+            width: 15%;
+            height: 4.5rem;
+            //   @include background-image("/svg/full logo -- white.svg", contain);
 
-          @media only screen and (max-width: $medium_screen_query) {
-            margin-left: 0;
-          }
-        }
-
-        .links {
-          cursor: pointer;
-
-          @media only screen and (max-width: $medium_screen_query) {
-            margin-top: 2rem;
-            padding: 1rem 0;
-            transform: translateY(-10px);
-          }
-
-          h1 {
-            opacity: 80%;
-
-            &:hover {
-              opacity: 100%;
+            @media only screen and (max-width: $medium_screen_query) {
+                width: 40%;
+                height: 3rem;
             }
-          }
-        }
-      }
-
-      .navigation_button {
-        @media only screen and (max-width: 750px) {
-          display: none;
-        }
-      }
-
-      .navigation_button_mobile {
-        width: 90% !important;
-
-        .button {
-          padding: 0.7rem !important;
-          width: 100% !important;
         }
 
-        @media only screen and (min-width: 750px) {
-          display: none;
-        }
-      }
+        .navigation_items {
+            @include flex(space-between, center, row);
 
-      .open_close_nav_button {
-        @media screen and (min-width: 750px) {
-          display: none;
-        }
-      }
+            @media only screen and (max-width: $medium_screen_query) {
+                flex-direction: row-reverse;
+            }
 
-      .navigation_btn {
-        border: 2px double transparent;
-        border-radius: 13px;
-        background: var(--black_-1);
-        color: var(--black_-1);
-        background-origin: border-box;
-        background-clip: padding-box, border-box;
-        box-shadow: 0px 16px 11px -8px rgba(0, 0, 0, 0.71);
-        text-align: center;
+            .item {
+                @include flex(initial, center, row);
+                left: 0;
+                position: absolute;
+                transform: translate(-50%, 5%);
+                left: 50%;
 
-        @media only screen and (max-width: $medium_screen_query) {
-          margin-left: 0;
-        }
+                @media only screen and (max-width: $medium_screen_query) {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0%;
+                    transform: translateY(99%);
+                    flex-direction: column;
+                    width: 100%;
+                    background-color: var(--black_-1);
+                    opacity: 0;
+                    height: 98vh;
+                }
 
-        .button_container {
-          display: flex;
-          flex-direction: column;
-        }
+                :not(:first-child) {
+                    margin-left: 4rem;
 
-        h4 {
-          color: var(--white);
-          position: relative;
-        }
+                    @media only screen and (max-width: $medium_screen_query) {
+                        margin-left: 0;
+                    }
+                }
 
-        h5 {
-          color: var(--white);
-          margin-top: -5px;
+                .links {
+                    cursor: pointer;
+
+                    @media only screen and (max-width: $medium_screen_query) {
+                        margin-top: 2rem;
+                        padding: 1rem 0;
+                        transform: translateY(-10px);
+                    }
+
+                    h1 {
+                        opacity: 80%;
+
+                        &:hover {
+                            opacity: 100%;
+                        }
+                    }
+                }
+            }
+
+            .navigation_button {
+                @media only screen and (max-width: $medium_screen_query) {
+                    display: none;
+                }
+            }
+
+            .open_close_nav_button {
+                cursor: pointer;
+                @media screen and (min-width: $medium_screen_query) {
+                    display: none;
+                }
+            }
+
+            .navigation_btn {
+                border: 2px double transparent;
+                border-radius: 13px;
+                background: var(--black_-1);
+                color: var(--black_-1);
+                background-origin: border-box;
+                background-clip: padding-box, border-box;
+                box-shadow: 0px 16px 11px -8px rgba(0, 0, 0, 0.71);
+                text-align: center;
+
+                @media only screen and (max-width: $medium_screen_query) {
+                    margin-left: 0;
+                }
+            }
         }
-      }
     }
-  }
 }

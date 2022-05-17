@@ -1,41 +1,26 @@
 // OWN
-import { useState, useEffect } from "react";
-import gsap from "gsap";
-import { useMediaQuery } from 'usehooks-ts';
+import { useEffect } from "react";
+// import { useMediaQuery } from 'usehooks-ts';
 
 
-import { getVideoBlobObjectUrl } from "components/utils/blobLoaders";
 
 
 const Hero = () => {
-    const matches = useMediaQuery('(max-width: 768px)');
+    // const matches = useMediaQuery('(max-width: 768px)');
 
-    const [startVideo, setStartVideo] = useState("");
-    const [endVideo, setEndVideo] = useState("");
 
 
 
     const handleVideoChange = async () => {
-        getVideoBlobObjectUrl("/video/start.mp4").then(src => setStartVideo(src));
-        getVideoBlobObjectUrl("/video/end.mp4").then(src => setEndVideo(src));
+        const intro = document.querySelector(".intro") as HTMLVideoElement
+        const idle = document.querySelector(".idle") as HTMLVideoElement
 
-        const tl = gsap.timeline();
-
-        tl.fromTo("#startVideo", {
-                zIndex: 1,
-                // opacity:1
-            }, {
-                zIndex: 0,
-                // opacity:0,
-                delay: 4.8,
-                duration: .2,
-            })
-            .fromTo("#endVideo", {
-                zIndex: 0,
-            }, {
-                zIndex: 1,
-                duration: .2,
-            });
+        intro.addEventListener("ended",()=> {
+            idle.style.zIndex = "1"
+            intro.style.zIndex = "0"
+            idle.autoplay = true
+            idle.load()
+        })
     };
 
     useEffect(() => {
@@ -46,35 +31,33 @@ const Hero = () => {
 
 
     return (
-        <>
-            <div className="hero_landing_main">
-                <div className="video-container">
-                    <video
-                        className="start"
-                        controls={true}
-                        muted
-                        autoPlay
-                        playsInline={true}
-                        loop={false}
-                        // type="video/mp4"
-                        src={!matches ? startVideo : "/video/compressed-end-super.mp4"}
-                        id="startVideo"
-                    />
+        <div className="hero_landing_main">
+            <div className="video-container">
+                <video
+                    className="intro"
+                    controls={false}
+                    muted
+                    autoPlay
+                    playsInline={true}
+                    loop={false}
+                >
+                    <source src="/video/intro--desktop.webm" type="video/webm" />
+                    <source src="/video/intro--desktop.mp4" type="video/mp4" />
+                </video>
 
 
-                    <video
-                        className="end"
-                        controls={true}
-                        muted
-                        autoPlay
-                        playsInline={true}
-                        loop
-                        src={!matches ? endVideo : "/video/compressed-end-super.mp4"}
-                        id="endVideo"
-                    />
-                </div>
+                <video
+                    className="idle"
+                    controls={false}
+                    muted
+                    playsInline={true}
+                    loop
+                >
+                    <source src="/video/idle--desktop.webm" type="video/webm" />
+                    <source src="/video/idle--desktop.mp4" type="video/mp4" />
+                </video>
             </div>
-        </>
+        </div>
     );
 };
 

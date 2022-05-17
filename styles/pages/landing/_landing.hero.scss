@@ -3,25 +3,21 @@
     display: flex;
     height: 100vh;
 
-    
     .video-container {
         position: relative;
         width: 100%;
         overflow: hidden;
 
-        @media screen and (max-width: 500px) {
-            transform: translateY(-2vh);
-        } 
-
-        // .start {
-        //     z-index: 1;
-            
-        // }
-        // .end {
-        //     z-index: 2;
+        // @media screen and (max-width: 500px) {
+        //     transform: translateY(-2vh);
         // }
 
-        .start,.end {
+        .intro {
+            z-index: 1;
+        }
+
+        .intro,
+        .idle {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -29,16 +25,34 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translateX(-50%) translateY(-52%) scale(0.4);
+            transform: translateX(-50%) translateY(-52%);
             background-size: cover;
             outline: none !important;
             user-select: none;
 
             @media screen and (max-width: 768px) {
-                transform: translateX(-50%) translateY(-57%) scale(0.2) !important;
+                transform: translateX(-50%) translateY(-57%) !important;
                 // background-color: red;
-            } 
+            }
         }
-        
+    }
+}
+
+.global-video-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-52%);
+    background-size: cover;
+    outline: none !important;
+    user-select: none;
+
+    @media screen and (max-width: 768px) {
+        transform: translateX(-50%) translateY(-57%) scale(0.2) !important;
+        // background-color: red;
     }
 }

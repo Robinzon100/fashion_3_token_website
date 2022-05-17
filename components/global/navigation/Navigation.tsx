@@ -1,9 +1,9 @@
-import gsap from "gsap";
 import Link from "next/link";
+import gsap from "gsap"
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
-import Button from "components/lib/button/Button";
 
+import Button from "components/lib/button/Button";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ const Navigation = () => {
 
 
     useEffect(() => {
-        if (typeof window === 'object' && window.innerWidth < 750) {
+        if (typeof window === 'object' && window.innerWidth < 968) {
             gsap.to('.navigation > .navigation_container > .navigation_items > .item', {
                 pointerEvents: isOpen ? 'initial' : 'none',
                 opacity: isOpen ? 1 : 0,
@@ -32,74 +32,94 @@ const Navigation = () => {
         setIsOpen(prev => !prev);
     };
 
-
-
-
     return (
         <nav className="navigation" >
             <div className="navigation_container">
                 <div className="navigation_items">
-                    <Link
+                    {/* <Link
                         passHref
                         href="/">
                         <div className="logo" />
-                    </Link>
+                    </Link> */}
 
                     <ul className="item">
                         <li className="links">
                             <Link
                                 passHref
-                                href="/collections">
+                                href="/">
                                 <h1 className="f-size-p4 f-weight-400">
-                                    Collections
+                                    Home
                                 </h1>
                             </Link>
                         </li>
                         <li className="links">
                             <Link
                                 passHref
-                                href="/meta_specs">
+                                href="/About">
                                 <h1 className="f-size-p4 f-weight-400">
-                                    MetaSpecs
+                                    About
                                 </h1>
                             </Link>
                         </li>
                         <li className="links">
                             <Link
                                 passHref
-                                href="/contact_us">
+                                href="/Claim">
                                 <h1 className="f-size-p4 f-weight-400">
-                                    Contact us
+                                    Claim
                                 </h1>
                             </Link>
                         </li>
-                        <li className="links navigation_button_mobile">
-                            <Button
-                                href={'https://shop.fashion3.io'}
-                                inNewTab={true}
-                                size={{ x: 3, y: 1 }}
-                                theme='white'
-                                style={{ borderRadius: '10px', color: 'var(--black)' }}>
-                                <h2 className="f-size-p4 f-weight-500"
-                                    style={{ color: 'var(--black)' }}>
-                                    shop
-                                </h2>
-                            </Button>
+                        <li className="links">
+                            <Link
+                                passHref
+                                href="/Governance">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Governance
+                                </h1>
+                            </Link>
                         </li>
+
+                        <li className="links">
+                            <Link
+                                passHref
+                                href="/Discussion">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Discussion
+                                </h1>
+                            </Link>
+                        </li>
+
+                        <li className="links">
+                            <Link
+                                passHref
+                                href="/Proposal">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Proposal
+                                </h1>
+                            </Link>
+                        </li>
+
+                        <li className="links">
+                            <Link href="/BuySell">
+                                <Button
+                                    className='navigation_button'
+                                    inNewTab={true}
+                                    size={{ x: 2, y: 1 }}
+                                    theme='white'
+                                    style={{ borderRadius: '10px', color: 'var(--black)' }}>
+                                    <h2 className="f-size-p4 f-weight-500"
+                                        style={{ color: 'var(--black)' }}>
+                                        Buy/sell
+                                    </h2>
+                                </Button>
+                            </Link>
+                        </li>
+
                     </ul>
 
-                    <Button
-                        href={'https://shop.fashion3.io'}
-                        className='navigation_button'
-                        inNewTab={true}
-                        size={{ x: 3, y: 1 }}
-                        theme='white'
-                        style={{ borderRadius: '10px', color: 'var(--black)' }}>
-                        <h2 className="f-size-p4 f-weight-500"
-                            style={{ color: 'var(--black)' }}>
-                            shop
-                        </h2>
-                    </Button>
+
+
 
 
                     <div className="open_close_nav_button">
@@ -139,6 +159,7 @@ const Navigation = () => {
                             )
                         }
                     </div>
+
                 </div>
             </div>
         </nav>

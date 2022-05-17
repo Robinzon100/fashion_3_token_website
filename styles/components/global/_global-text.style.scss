@@ -1,0 +1,35 @@
+article {
+    margin: 10rem auto;
+    width: 100%;
+    max-width: 50rem;
+    padding: 1.5rem;
+
+    .container {
+        &:not(:first-child) {
+            margin-top: 4rem;
+        }
+    }
+    
+    h1 {
+        font-size: $f-size-h6;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: $f-size-p6;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: justify;
+        width: 100%;
+        max-width: 45rem;
+    }
+
+    ul {
+        li {
+            margin-top: 1rem;
+        }
+    }
+    .sub-text {
+        margin-left: 1rem;
+    }
+}
