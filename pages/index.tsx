@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 import Hero from "components/pages/landing/hero/Hero.landing"
 
