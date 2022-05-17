@@ -11,7 +11,7 @@ const Hero = () => {
 
 
 
-    const handleVideoChange = async () => {
+    const handleVideoChange =  () => {
         const intro = document.querySelector(".intro") as HTMLVideoElement
         const idle = document.querySelector(".idle") as HTMLVideoElement
 
