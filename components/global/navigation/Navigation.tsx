@@ -19,6 +19,7 @@ const Navigation = () => {
             gsap.to('.navigation > .navigation_container > .navigation_items > .item', {
                 pointerEvents: isOpen ? 'initial' : 'none',
                 opacity: isOpen ? 1 : 0,
+                // translateY: isOpen ? "99%" : "0%",
                 duration: 1,
                 ease: 'power4.out'
             });

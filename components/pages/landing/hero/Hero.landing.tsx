@@ -10,8 +10,6 @@ const Hero = () => {
     // const matches = useMediaQuery('(max-width: 768px)');
 
 
-
-
     const handleVideoChange = () => {
         const intro = document.querySelector(".intro") as HTMLVideoElement;
         const idle = document.querySelector(".idle") as HTMLVideoElement;
