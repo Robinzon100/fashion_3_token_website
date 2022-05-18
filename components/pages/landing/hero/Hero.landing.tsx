@@ -1,13 +1,13 @@
 // OWN
 import gsap from "gsap";
 import { useEffect } from "react";
-// import { useMediaQuery } from 'usehooks-ts';
+import { useMediaQuery } from 'usehooks-ts';
 
 
 
 
 const Hero = () => {
-    // const matches = useMediaQuery('(max-width: 768px)');
+    const matches = useMediaQuery('(max-width: 768px)');
 
 
     const handleVideoChange = () => {
@@ -15,7 +15,7 @@ const Hero = () => {
         const idle = document.querySelector(".idle") as HTMLVideoElement;
 
         intro.addEventListener("ended", () => {
-            gsap.to('.intro',{
+            gsap.to('.intro', {
                 opacity: 0,
                 duration: 1,
                 ease: 'power4.out'
@@ -55,8 +55,8 @@ const Hero = () => {
                     playsInline={true}
                     loop
                 >
-                    <source src="video/idle--desktop.webm" type="video/webm" />
-                    <source src="video/idle--desktop.mp4" type="video/mp4" />
+                    <source src={!matches ? "video/idle--desktop.webm" : "video/mobile--idle-desktop.webm"} type="video/webm" />
+                    <source src={!matches ? "video/idle--desktop.mp4" : "video/mobile--intro-desktop.mp4"} type="video/mp4" />
                 </video>
             </div>
         </div>
