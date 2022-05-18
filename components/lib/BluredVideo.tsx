@@ -7,6 +7,7 @@ const BluredVideo = () => {
                 className="global-video-style"
                 controls={false}
                 muted
+                autoPlay
                 playsInline={true}
                 loop={true}
                 style={{zIndex:"1"}}
@@ -22,7 +23,7 @@ const BluredVideo = () => {
             <style jsx>
                 {`
                 .blured {
-                    position: absolute;
+                    position: fixed;
                     overflow: hidden;
                     background-color:transparent;
                     width:100vw;

@@ -19,20 +19,16 @@
         .intro,
         .idle {
             position: absolute;
-            top: 0%;
-            left: 0%;
+            top: 50%;
+            left: 50%;
             min-width: 100%;
             min-height: 100%;
+            transform: translateX(-50%) translateY(-50%);
             width: auto;
             height: auto;
             background-size: cover;
             outline: none !important;
             user-select: none;
-
-            @media screen and (max-width: 768px) {
-                transform: translateX(-50%) translateY(-57%) !important;
-                // background-color: red;
-            }
         }
     }
 }
