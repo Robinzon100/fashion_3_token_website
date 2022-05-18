@@ -56,7 +56,7 @@ const Hero = () => {
                     loop
                 >
                     <source src={!matches ? "video/idle--desktop.webm" : "video/mobile--idle-desktop.webm"} type="video/webm" />
-                    <source src={!matches ? "video/idle--desktop.mp4" : "video/mobile--intro-desktop.mp4"} type="video/mp4" />
+                    <source src={!matches ? "video/idle--desktop.mp4" : "video/mobile--idle-desktop.mp4"} type="video/mp4" />
                 </video>
             </div>
         </div>
