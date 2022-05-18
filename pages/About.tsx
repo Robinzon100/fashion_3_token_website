@@ -1,4 +1,4 @@
-import BluredVideo from 'components/lib/BluredVideo'
+import BluredVideo from 'components/lib/BluredVideo';
 
 const About = () => {
     return (
@@ -8,26 +8,44 @@ const About = () => {
             <article className='article'>
                 <div className='container'>
                     <h1>Fashion Token is a cultural currency</h1>
-
-                    <p>The modern creative economies are characterized by traditional disciplines goverging into a single point of digitalization. The cultural currencies capture connections between physical items and their virtual counterparts. The $FSHN token is a cultural currency that is created to support the new phygital frontier, controlled and built by the community. It will serve as a decentralized protocol to help break barriers between physical and virtual realities.</p>
+                    <p>
+                        The modern creative economies are characterized
+                        by traditional disciplines goverging into a single
+                        point of digitalization. The cultural currencies
+                        capture connections between physical items and their
+                        virtual counterparts. The $FSHN token is a cultural
+                        currency that is created to support the new phygital
+                        frontier, controlled and built by the community. It
+                        will serve as a decentralized protocol to help break
+                        barriers between physical and virtual realities.
+                    </p>
                 </div>
-
-
 
                 <div className='container'>
                     <h1>Fashion DAO</h1>
-
-                    <p>Fashion DAO membership is open to all Fashion token holders. A Decentralized Autonomous Organization (DAO) is critical in building and managing a global community and key to the success of the Fashion token ecosystem. The Fashion Improvement Proposal Process will allow the Fashion DAO members to make decisions regarding the Ecosystem Fund allocations, projects, partnerships, governance rules and beyond.</p>
+                    <p>
+                        Fashion DAO membership is open to all Fashion token
+                        holders. A Decentralized Autonomous Organization (DAO)
+                        is critical in building and managing a global
+                        community and key to the success of the Fashion
+                        token ecosystem. The Fashion Improvement Proposal
+                        Process will allow the Fashion DAO members to make
+                        decisions regarding the Ecosystem Fund allocations,
+                        projects, partnerships, governance rules and beyond.
+                    </p>
                 </div>
-
-
-
-
 
                 <div className='container'>
                     <h1>The Circle</h1>
-
-                    <p>The circle is a special group of people responsible for the oversight of the Fashion DAO. The purpose of the Circle is to enact DAO proposals and go through with the vision of the community. It meets to discuss proposals requiring review The Circle will serve an initial 6 month term, after which the DAO members will vote annually on Circle members.</p>
+                    <p>
+                        The circle is a special group of people responsible
+                        for the oversight of the Fashion DAO. The purpose of
+                        the Circle is to enact DAO proposals and go through
+                        with the vision of the community. It meets to discuss
+                        proposals requiring review The Circle will serve an
+                        initial 6 month term, after which the DAO members
+                        will vote annually on Circle members.
+                    </p>
                 </div>
 
 
@@ -35,8 +53,10 @@ const About = () => {
 
                 <div className='container'>
                     <h1>Fashion Token, FSHN</h1>
-
-                    <p>FSHN  is a SNIP-20 cultural currency used in the Fashion3 ecosystem to give interest, status, and participation in key community activities.
+                    <p>
+                        FSHN  is a SNIP-20 cultural currency used in the
+                        Fashion3 ecosystem to give interest, status, and
+                        participation in key community activities.
                     </p>
 
                     <br />
@@ -137,10 +157,10 @@ const About = () => {
 
             </article>
         </>
-    )
-}
+    );
+};
 
-export default About
+export default About;
 
 
 
