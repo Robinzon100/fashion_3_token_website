@@ -6,8 +6,8 @@ const About = () => {
             <BluredVideo />
 
             <article className='article'>
-                <div className='container'>
-                    <h1>Fashion Token is a cultural currency</h1>
+                
+                    <h1 className='f-size-h4'>Fashion Token is a cultural currency</h1>
                     <p>
                         The modern creative economies are characterized
                         by traditional disciplines goverging into a single
@@ -19,9 +19,11 @@ const About = () => {
                         will serve as a decentralized protocol to help break
                         barriers between physical and virtual realities.
                     </p>
-                </div>
 
-                <div className='container'>
+                
+                    <br />
+                    <br />
+
                     <h1>Fashion DAO</h1>
                     <p>
                         Fashion DAO membership is open to all Fashion token
@@ -33,9 +35,11 @@ const About = () => {
                         decisions regarding the Ecosystem Fund allocations,
                         projects, partnerships, governance rules and beyond.
                     </p>
-                </div>
 
-                <div className='container'>
+
+                    <br />
+                    <br />
+                
                     <h1>The Circle</h1>
                     <p>
                         The circle is a special group of people responsible
@@ -46,12 +50,12 @@ const About = () => {
                         initial 6 month term, after which the DAO members
                         will vote annually on Circle members.
                     </p>
-                </div>
 
 
+                    <br />
+                    <br />
 
-
-                <div className='container'>
+                
                     <h1>Fashion Token, FSHN</h1>
                     <p>
                         FSHN  is a SNIP-20 cultural currency used in the
@@ -96,21 +100,19 @@ const About = () => {
                             </div>
                         </li>
                     </ul>
-                </div>
 
+                    <br />
+                    <br />
 
-
-                <div className="container">
 
                     <h1>Proof of fashion</h1>
                     <p>
                         The proof of fashion (PoF) algorithm is the key driving force behind the Fashion token. PoF algorithm has a 5% yearly inflation with weekly epochs. Every week new tokens are minted and divided evenly between eligible Fashion3 NFT holders. Only certain Fashion3 phygitals are eligible for PoF, please refer to the Metaspecs page to see the eligibility criteria.
                     </p>
-                </div>
 
+                    <br />
+                    <br />
 
-
-                <div className="container">
                     <h1>Fashion token allocation</h1>
                     <p className='f-weight-500'>
                         FSHN’s genesis supply is 1,000,000. Core contributor’s tokens are vested, and unlocked over a period of 48 months. FSHN will be distributed among four main groups as detailed in the chart below.
@@ -151,7 +153,6 @@ const About = () => {
                             </div>
                         </li>
                     </ul>
-                </div>
 
 
 

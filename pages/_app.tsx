@@ -8,7 +8,7 @@ import "../styles/main.scss";
 //! ---- OWN
 import Navigation from "components/global/navigation/Navigation";
 import HeadAndMeta from "components/global/headAndMeta/HeadAndMeta";
-import React from "react";
+import Footer from "components/global/footer/Footer";
 
 
 
@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     </main>
                 </Transition>
             </SwitchTransition>
-            {/* <Footer /> */}
+            <Footer />
         </>
 
     );

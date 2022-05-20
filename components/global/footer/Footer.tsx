@@ -1,30 +1,57 @@
-// import Link from "next/link"
+import Link from "next/link"
 
 const Footer = () => {
 
 
     return (
         <>
-            {/* <div className="footer">
+            <div className="footer">
                 <div className="footer_container">
-                    <Link href="/" passHref>
-                        <div className="logo" />
-                    </Link>
+                    <ul className="footer_list">
+                        <li className="item">
+                            <Link
+                                passHref
+                                href="/Terms">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Terms
+                                </h1>
+                            </Link>
+                        </li>
 
-                    <a href="https://twitter.com/unity_capital" target="_blank"  rel="noreferrer">
-                        <div className="twitter">
-                        </div>
-                    </a>
+
+                        <li className="item">
+                            <Link
+                                passHref
+                                href="/Privacy">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Privacy
+                                </h1>
+                            </Link>
+                        </li>
 
 
+                        <li className="item">
+                            <Link
+                                passHref
+                                href="/Help">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Help
+                                </h1>
+                            </Link>
+                        </li>
 
-                    <a href="https://t.me/unitycapital" target="_blank"  rel="noreferrer">
-                        <div className="telegram">
-                        </div>
-                    </a>
-
+                        <li className="item">
+                            <Link
+                                passHref
+                                href="/">
+                                <h1 className="f-size-p4 f-weight-400">
+                                    Discord
+                                </h1>
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
-            </div> */}
+            </div>
         </>
     )
 }
