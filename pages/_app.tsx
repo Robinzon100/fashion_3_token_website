@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 
-import { SwitchTransition, Transition } from 'react-transition-group'
-import gsap from 'gsap'
+import { SwitchTransition, Transition } from 'react-transition-group';
+import gsap from 'gsap';
 
 
 import "../styles/main.scss";
@@ -13,25 +13,23 @@ import Footer from "components/global/footer/Footer";
 
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-;
+    ;
 
     return (
         <>
             <HeadAndMeta
-                title="UNITY capital"
+                title="Fashion token"
                 description="
-                        UNITY Capital Is community Focused venture capital 
-                        helping blockchain start-ups make a change with 
-                        investment,community support, governance & 
-                        ecosystem support."
+                    A cultural currency created to support the evolution of 
+                    fashion, culture, storytelling, and physical events. 
+                    The official token of Fashion³"
                 favIconImagePath="/meta_images/logo_mark.png"
-                baseUrl="https://unity-capital.vercel.app"
-                ogTitle="UNITY capital"
+                baseUrl="https://fshntoken.com"
+                ogTitle="Fashion token"
                 ogDescription="
-                        UNITY Capital Is community Focused venture capital 
-                        helping blockchain start-ups make a change with 
-                        investment,community support, governance & 
-                        ecosystem support."
+                    A cultural currency created to support the evolution of 
+                    fashion, culture, storytelling, and physical events. 
+                    The official token of Fashion³"
                 ogImagePath="/image/og/og_image.png"
             />
 
@@ -66,7 +64,7 @@ function enter() {
         opacity: 1,
         duration: 1,
         ease: "power4.out"
-    })
+    });
 }
 
 function exit() {
@@ -74,5 +72,5 @@ function exit() {
         opacity: 0,
         duration: 1,
         ease: "power4.out"
-    })
+    });
 }
